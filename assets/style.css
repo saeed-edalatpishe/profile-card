@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+* {
+    margin: 0;
+}
+ul {
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #fbd161, #ff5acd);
+    font-family: "Montserrat", sans-serif;
+}
+.card {
+    width: 320px;
+    background-color: #fefefe;
+    border-radius: 40px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+.box-top {
+    background: rgb(214,91,113);
+    background: linear-gradient(212deg, rgba(214,91,113,1) 0%, rgba(179,25,53,1) 100%);
+    padding: 30px 0;
+    animation: pulse 5s infinite;
+}
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px #0000009c;
+}
+.details-box {
+    padding: 20px;
+    background-color: white;
+}
+.details-box .name {
+    font-weight: bold;
+    color: #505050;
+}
+.details-box .job-title {
+    font-size: 14px;
+    color: #6a6969;
+    padding: 8px 0;
+}
+.details-box .social-media li {
+    display: inline-block;
+    padding: 10px;
+}
+.details-box .social-media li a {
+    color: #6a6969;
+}
+.details-box .social-media li a:hover {
+    color: rgb(179 25 52);
+}
+.details-box .about {
+    font-size: 13px;
+    color: #8d8c8c;
+    line-height: 22px;
+    width: 80%;
+    margin: 10px auto;
+}
+.more-info {
+    position: absolute;
+    z-index: 1;
+    left: 20px;
+    top: -40px;
+    color: yellow;
+    font-size: 24px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+    transition-delay: 0.2s;
+}
+.card:hover .more-info {
+    top: 20px;
+}
+.layer-two {
+    width: 100%;
+    height: 100%;
+    transform: scale(0, 1);
+    top: 0;
+    background-color: rgb(122 16 35 / 90%);
+    position: absolute;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+    color: #FFF;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+
+}
+.layer-two.isOpen {
+    transform: scale(1, 1);
+}
+.layer-two p {
+    padding: 30px;
+}
